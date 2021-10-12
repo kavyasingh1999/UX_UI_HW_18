@@ -20,6 +20,10 @@ ul{
     height: 600px;
     padding: 25px;
 }
+img {
+    height: 200px;
+    width: 200px;
+}
 .content{
     width: 500px;
     margin: 0 auto;
@@ -38,4 +42,34 @@ footer li{
 footer ul{
     margin-left: auto;
     margin-right: auto;
+}
+.flexContainer{
+    display:flex;
+}
+.flexContainer div{
+    width: 33%;
+}
+.workGrid {
+    display:grid;
+    grid-template-areas: 'auto auto auto auto';
+}
+.workGrid div{
+    grid-area: auto;
+}
+@media only screen and (max-width: 600){
+    .flex-container {
+        flex-direction: column;
+      }
+    .flexContainer div{
+        width: 100%;
+    }
+    .workGrid {
+        display:grid;
+        grid-template-areas: 'auto auto auto auto';
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows:300px 300px 300px;
+    }
+    .workGrid div{
+        grid-area: auto;
+    }
 }
